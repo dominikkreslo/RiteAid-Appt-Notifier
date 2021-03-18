@@ -8,5 +8,6 @@ These variables can either be stored as system enviornment variables or via a .e
 `EMAIL_TARGET` The email(s) to send the notifications to. If multiple emails seperate with a comma
 
 # To Run
-`npm install` installs dependencies <br>
-`npm start` runs program with dotenv enabled
+1. Change `zipCode` and `searchDistance` variables at the top of index.js to desired paramaters
+2. `npm install` installs dependencies
+3. `npm start` runs program with dotenv enabled
