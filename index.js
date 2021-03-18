@@ -1,13 +1,13 @@
 const fetch = require("node-fetch");
 const sendEmail = require("./email.js");
-const sleepTime = 30 * 1000;
-const zipCode = "90210"; // must be string to maintain leading zeros
+const sleepTime = 20 * 1000;
+const zipCode = "08755"; // must be string to maintain leading zeros
 const searchRadius = "50"; // in miles
 const terminalLink = require("terminal-link");
 
 const link = terminalLink(
   "Rite Aid Appointment Website",
-  "https://www.riteaid.com/pharmacy/apt-scheduler"
+  "https://www.riteaid.com/pharmacy/covid-qualifier"
 );
 
 fetch(
@@ -50,7 +50,7 @@ function getAvailability(stores) {
       });
 
       if (available.length > 0) {
-        sendEmail(available);
+        //sendEmail(available);
       }
       return;
     })
