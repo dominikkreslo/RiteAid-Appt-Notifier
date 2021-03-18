@@ -2,7 +2,7 @@ const fetch = require('node-fetch');
 const sendEmail = require('./email.js');
 
 const sleepTime = 30 * 1000;
-const zipCode = '08731'; // must be string to maintain leading zeros
+const zipCode = '90210'; // must be string to maintain leading zeros
 const searchRadius = '50'; // in miles
 fetch(`https://www.riteaid.com/services/ext/v2/stores/getStores?address=${zipCode}&attrFilter=PREF-112&fetchMechanismVersion=2&radius=${searchRadius}`)
 	.then(res => res.json())
