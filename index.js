@@ -23,6 +23,7 @@ function getAvailability(stores) {
   const time =
     today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
   console.log("\x1b[1m", "Grabbing availability", "\x1b[0m", time);
+  console.log(link);
   let promises = [];
   for (const store of stores) {
     promises.push(
@@ -41,7 +42,7 @@ function getAvailability(stores) {
         const locationString = `${stores[index].address}, ${stores[index].city}`;
         if (returnData.slots["1"] || returnData.slots["2"]) {
           console.log(locationString, "\x1b[32m", "AVAILABLE", "\x1b[0m");
-          console.log(link);
+
           available.push(locationString);
         } else {
           console.log(locationString, "\x1b[31m", "NOT AVAILABLE", "\x1b[0m");
