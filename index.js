@@ -1,7 +1,6 @@
 const fetch = require('node-fetch');
 const sendEmail = require('./email.js');
 
-//const storeNumbers = ['10512', '10517 ', '425', '3974', '2518', '10510'];
 const sleepTime = 30 * 1000;
 const zipCode = '08731'; // must be string to maintain leading zeros
 const searchRadius = '50'; // in miles
