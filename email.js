@@ -11,7 +11,7 @@ const transporter = nodemailer.createTransport({
 function sendEmail(locations){
 	const mailOptions = {
 		from: process.env.EMAIL_USER,
-		to: 'JacobSzepsy@gmail.com',
+		to: process.env.TARGET_EMAIL,
 		subject: 'Appointments available!',
 		text: `There are appointments available at the following RiteAid locations: ${locations}`
 	};
